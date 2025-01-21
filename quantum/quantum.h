@@ -244,11 +244,11 @@ extern layer_state_t layer_state;
 #    include "layer_lock.h"
 #endif
 
-void set_single_default_layer(uint8_t default_layer);
 #ifdef KEY_CANCELLATION_ENABLE
 #    include "process_key_cancellation.h"
 #endif
 
+void set_single_default_layer(uint8_t default_layer);
 void set_single_persistent_default_layer(uint8_t default_layer);
 
 #define IS_LAYER_ON(layer) layer_state_is(layer)
