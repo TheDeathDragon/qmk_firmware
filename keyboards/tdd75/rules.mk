@@ -1,0 +1,2 @@
+KEY_CANCELLATION_ENABLE = yes
+$(warning KEY_CANCELLATION_ENABLE is Enabled)
