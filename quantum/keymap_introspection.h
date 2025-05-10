@@ -4,6 +4,7 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include "quantum/e_macro.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Key mapping
@@ -126,3 +127,22 @@ key_cancellation_t key_cancellation_get_raw(uint16_t idx);
 // Get the keycodes for the key cancellation, stored in firmware, potentially stored dynamically
 key_cancellation_t key_cancellation_get(uint16_t idx);
 #endif // defined(KEY_CANCELLATION_ENABLE)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// E Macro
+
+#if defined(E_MACRO_ENABLE)
+// Forward declaration of e_macro_t so we don't need to deal with header reordering
+struct e_macro_t;
+typedef struct e_macro_t e_macro_t;
+
+// Get the number of E macros defined in the user's keymap, stored in firmware rather than any other persistent storage
+uint16_t e_macro_count_raw(void);
+// Get the number of E macros defined in the user's keymap, potentially stored dynamically
+uint16_t e_macro_count(void);
+
+// Get the E macro definitions, stored in firmware rather than any other persistent storage
+e_macro_t e_macro_get_raw(uint16_t idx);
+// Get the E macro definitions, potentially stored dynamically
+e_macro_t e_macro_get(uint16_t idx);
+#endif // defined(E_MACRO_ENABLE)

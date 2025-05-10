@@ -193,3 +193,26 @@ __attribute__((weak)) key_cancellation_t key_cancellation_get(uint16_t idx) {
     return key_cancellation_get_raw(idx);
 }
 #endif // defined(KEY_CANCELLATION_ENABLE)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// E Macro
+
+#if defined(E_MACRO_ENABLE)
+uint16_t e_macro_count_raw(void) {
+    return sizeof(e_macro_list) / sizeof(e_macro_t);
+}
+
+__attribute__((weak)) uint16_t e_macro_count(void) {
+    return e_macro_count_raw();
+}
+
+e_macro_t e_macro_get_raw(uint16_t idx) {
+    e_macro_t ret;
+    memcpy_P(&ret, &e_macro_list[idx], sizeof(e_macro_t));
+    return ret;
+}
+
+__attribute__((weak)) e_macro_t e_macro_get(uint16_t idx) {
+    return e_macro_get_raw(idx);
+}
+#endif // defined(E_MACRO_ENABLE)

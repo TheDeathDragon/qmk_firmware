@@ -124,6 +124,7 @@
                     { "text": "Key Lock", "link": "/features/key_lock" },
                     { "text": "Key Overrides", "link": "/features/key_overrides" },
                     { "text": "Key Cancellation", "link": "/features/key_cancellation" },
+                    { "text": "E Macro", "link": "/features/e_macro" },
                     { "text": "Layers", "link": "/feature_layers" },
                     { "text": "Layer Lock", "link": "/features/layer_lock" },
                     { "text": "One Shot Keys", "link": "/one_shot_keys" },

@@ -88,6 +88,10 @@
 #    include "process_key_cancellation.h"
 #endif
 
+#ifdef E_MACRO_ENABLE
+#    include "process_e_macro.h"
+#endif
+
 #ifdef AUDIO_ENABLE
 #    ifndef GOODBYE_SONG
 #        define GOODBYE_SONG SONG(GOODBYE_SOUND)
@@ -423,6 +427,9 @@ bool process_record_quantum(keyrecord_t *record) {
 #endif
 #ifdef KEY_CANCELLATION_ENABLE
             process_key_cancellation(keycode, record) &&
+#endif
+#ifdef E_MACRO_ENABLE
+            process_e_macro(keycode, record) &&
 #endif
             true)) {
         return false;

@@ -13,10 +13,8 @@
         "backlight": false,
         "bootmagic": true,
         "command": false,
-        "console": false,
         "extrakey": true,
         "key_lock": false,
-        "mousekey": false,
         "nkro": true,
         "rgblight": true
     },

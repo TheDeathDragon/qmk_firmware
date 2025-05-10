@@ -20,6 +20,27 @@
             "aliases": [
                 "KX_CATG"
             ]
+        },
+        "0x7C7F": {
+            "group": "quantum",
+            "key": "QK_KEY_E_MACRO_ON",
+            "aliases": [
+                "KX_EON"
+            ]
+        },
+        "0x7C80": {
+            "group": "quantum",
+            "key": "QK_KEY_E_MACRO_OFF",
+            "aliases": [
+                "KX_EOFF"
+            ]
+        },
+        "0x7C81": {
+            "group": "quantum",
+            "key": "QK_KEY_E_MACRO_TOGGLE",
+            "aliases": [
+                "KX_ETOG"
+            ]
         }
     }
 }

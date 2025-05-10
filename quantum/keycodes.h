@@ -765,6 +765,9 @@ enum qk_keycode_defines {
     QK_KEY_CANCELLATION_ON = 0x7C7C,
     QK_KEY_CANCELLATION_OFF = 0x7C7D,
     QK_KEY_CANCELLATION_TOGGLE = 0x7C7E,
+    QK_KEY_E_MACRO_ON = 0x7C7F,
+    QK_KEY_E_MACRO_OFF = 0x7C80,
+    QK_KEY_E_MACRO_TOGGLE =0x7C81,
     QK_KB_0 = 0x7E00,
     QK_KB_1 = 0x7E01,
     QK_KB_2 = 0x7E02,
@@ -1455,6 +1458,9 @@ enum qk_keycode_defines {
     KX_CAON    = QK_KEY_CANCELLATION_ON,
     KX_CAOF    = QK_KEY_CANCELLATION_OFF,
     KX_CATG    = QK_KEY_CANCELLATION_TOGGLE,
+    KX_EON     = QK_KEY_E_MACRO_ON,
+    KX_EOFF    = QK_KEY_E_MACRO_OFF,
+    KX_ETOG    = QK_KEY_E_MACRO_TOGGLE,
 };
 
 // Range Helpers
