@@ -34,7 +34,7 @@ bool process_e_macro(uint16_t keycode, keyrecord_t *record) {
             return false;
 
         case KC_E:
-            if (keymap_config.e_macro_enable && !record->event.pressed && !e_macro_running) {
+            if (keymap_config.e_macro_enable && record->event.pressed && !e_macro_running) {
                 e_macro_running = true;
 #ifdef CONSOLE_ENABLE
                 uprintf("===================E Macro Start===================\n");
