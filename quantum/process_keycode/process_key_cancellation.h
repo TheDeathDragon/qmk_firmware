@@ -6,6 +6,11 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "action.h"
+#include "wait.h"
+#include "timer.h"
+#ifdef CONSOLE_ENABLE
+#include "print.h"
+#endif
 
 typedef struct key_cancellation_t {
     uint16_t press, unpress;

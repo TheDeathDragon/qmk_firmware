@@ -87,6 +87,9 @@ bool process_key_cancellation(uint16_t keycode, keyrecord_t *record) {
     }
 
     if (!record->event.pressed) {
+        #ifdef CONSOLE_ENABLE
+        uprintf("release key : %d\n", keycode);
+        #endif
         return true;
     }
 
@@ -103,7 +106,21 @@ bool process_key_cancellation(uint16_t keycode, keyrecord_t *record) {
     for (uint16_t i = 0; i < key_cancellation_count(); i++) {
         key_cancellation_t key_cancellation = key_cancellation_get(i);
         if (keycode == key_cancellation.press) {
+            #ifdef CONSOLE_ENABLE
+            uprintf("===================process_key_cancellation start===================\n");
+            uprintf("process_key_cancellation keycode : %d\n", keycode);
+            uprintf("process_key_cancellation record->event.pressed : %d\n", record->event.pressed);
+            uprintf("key_cancellation.unpress : %d\n", key_cancellation.unpress);
+            uprintf("key_cancellation.press : %d\n", key_cancellation.press);
+            uint32_t current_time = timer_read32();
+            uprintf("current_time : %d\n", current_time);
+            wait_ms(60);
+            current_time = timer_read32();
+            uprintf("current_time : %d\n", current_time);
+            uprintf("send del_key\n");
+            #endif
             del_key(key_cancellation.unpress);
+            // send_keyboard_report();
         }
     }
 

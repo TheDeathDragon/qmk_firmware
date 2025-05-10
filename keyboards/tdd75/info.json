@@ -1,0 +1,8 @@
+{
+    "manufacturer": "TheDeathDragon",
+    "url": "",
+    "maintainer": "TheDeathDragon",
+    "usb": {
+        "vid": "0x4151"
+    }
+}
