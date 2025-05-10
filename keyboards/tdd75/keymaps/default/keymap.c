@@ -31,10 +31,10 @@ const key_cancellation_t PROGMEM key_cancellation_list[] = {
 #if defined(E_MACRO_ENABLE)
 // Define the E Macro key sequence
 const e_macro_t e_macro_list[] PROGMEM = {
-    {KC_MS_BTN2, 10},  // Mouse Right Button
-    {KC_MS_BTN1, 10},  // Mouse Left Button
-    {KC_Q, 10},        // Q Key
-    {KC_Q, 10},        // Q Key
+    {KC_MS_BTN2, 20},  // Mouse Right Button
+    {KC_MS_BTN1, 20},  // Mouse Left Button
+    {KC_Q, 20},        // Q Key
+    {KC_Q, 20},        // Q Key
 };
 #endif
 /*
